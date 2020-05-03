@@ -22,18 +22,18 @@ class TransactionsRepository extends Repository<Transaction> {
          case "outcome":
            accumulator.outcome += Number(transaction.value);
            break;
-         
-         default: 
+
+         default:
            break;
-       } 
-       
+       }
+
        return accumulator;
     },
     {
       income: 0,
       outcome: 0,
       total: 0,
-    },       
+    },
    );
 
     const total = income - outcome;
